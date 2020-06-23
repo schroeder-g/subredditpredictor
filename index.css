@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box; /* Recalculates h*w with padding and border included */
+    Max-width: 100%; /*prevents elements from being larger than their parent*/
+    Padding: 0;
+    Margin: 0;
+    Border: 1px solid black; /* temporary for positioning */
+    }
+
+body{
+    font-size: 62.5% /* sets 1rem to 10 px */
+}
+
+/* styling letter animation */ 
+.char{
+    display: block;
+    line-height: 0.5;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.works{
+    display: flex;
+    justify-content: space-around;
+}
+
+span{
+    display: inline-block
+}
+
+.dot {
+    color:#FF5700
+}
+
+.title{
+    margin: 0 5%;
+    font-size: 3rem;
+    font-family: ;
+}
+
+#main-title{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.step{
+    width: 30%;
+    justify-content: center;
+}
+
+.step h3, .step p{
+    text-align: center;
+}
