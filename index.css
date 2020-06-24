@@ -3,14 +3,39 @@
     Max-width: 100%; /*prevents elements from being larger than their parent*/
     Padding: 0;
     Margin: 0;
-    Border: 1px solid black; /* temporary for positioning */
+    /* Border: 1px solid black; */
     }
 
 body{
+    font-family: 'Asap', sans-serif;
     font-size: 62.5% /* sets 1rem to 10 px */
 }
 
-/* styling letter animation */ 
+nav{
+    display: flex;
+    height: 10%;
+    margin: 0 1.5%;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    font-size: 1.25rem;
+    align-content: center;
+    color: black;
+    padding: 1.5%;
+    text-decoration: none;
+}
+
+#login{
+    flex: 6;
+    text-align: end;
+}
+
+#here{
+    color: #FF5700;
+}
+/* styling letter */ 
 .char{
     display: block;
     line-height: 0.5;
@@ -18,35 +43,169 @@ body{
   margin-bottom: 0;
 }
 
-.works{
-    display: flex;
-    justify-content: space-around;
+.i {
+    padding-bottom: 22px;
 }
 
 span{
-    display: inline-block
+    display: inline-block;
+    /* align-self: center; */
 }
 
 .dot {
-    color:#FF5700
+    color:#FF5700;
+    padding-bottom: 6px;
+    
 }
 
-.title{
-    margin: 0 5%;
-    font-size: 3rem;
-    font-family: ;
-}
-
-#main-title{
+#main-title, #about-title{
     text-align: center;
     font-size: 3rem;
+    /* font-family: 'Varela Round', sans-serif; */
+    margin: 0 0 1.8%;
+    background-color: #336699;
+    height: 15%;
+    padding-top: 1.5%;
+}
+
+#about-title{
+    padding-top: .2%;
+}
+/* For the Home page */
+.marketing{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4% 0
+}
+
+
+#logo{
+    width: 27%;
+
+}
+#copy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 42%;
+    min-width: 550px;
+    max-width: 100%;
+}
+
+#copy h2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 2.4rem
+}
+#copy h3{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    padding-bottom: 2.4%
+
+}
+
+#copy button{
+    width: 18%;
+    padding: 2.4%;
+    align-items: center;
+    border-style: none;
+    border-radius: 21px;
+    font-family: 'Asap', sans-serif;
+    color: snow;
+    background-color: 	#336699	;
+}
+
+button :active{
+    border-style: none;
+}
+
+hr{
+    margin: 3%;
+}
+
+/* For The About Page */
+.works{
+    display: flex;
+    justify-content: space-between;
+    height: 51%;
+    padding: 0 6%;
 }
 
 .step{
+    display: flex;
+    flex-direction: column;
     width: 30%;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.step h3, .step p{
+.example-container{
+    align-items: center;
+    padding: 10% 3%;
+    height: 25%;
+    width: 100%;
+    background-color: #202020;
+    border-radius: 3px;
+    border-color: 
+
+}
+
+.step .example{
+    font-size: .9rem;
+    font-family: "Cousine", monospace;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    background-color: #202020;
+    color: snow;
+    animation: typewriter 3s steps(26) 2s 1 normal both,
+             blink-caret 500ms steps(44) infinite normal;
+}
+
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 68%;}
+  }
+
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+.explainer{
+    height: 43.44px;
+}
+
+.step.two h3{
+    color:#FF5700;
+}
+
+.step h3{
     text-align: center;
+    text-decoration: underline;
+    font-size: 1.8rem;
+    justify-self: flex-start;
+    padding: 3%;
+}
+
+.step .construction{
+    text-align: center;
+    font-size: 2.5rem;
+    transform: rotate(-30deg);
+}
+
+.step .explainer{
+    text-align: center;
+    font-size: .9rem;
+    padding: 0 15% 3%;
+}
+
+footer{
+    background-color: #336699;
+    width: 100%;
+    height: 12%;
 }
