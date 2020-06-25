@@ -277,3 +277,25 @@ footer{
 }
 
 /* Responsive Design */
+@media only screen and (max-width: 500px){
+    .works{
+        flex-flow: column nowrap;
+        min-height: 100%;
+        align-items: center;
+
+    }
+    .step{
+        min-width: 85%;
+        min-height: 270px;
+        margin-bottom: ;
+    }
+
+    
+    #team .member{
+        max-width: 81%;
+    }
+
+    #team-title{
+        margin bottom
+    }
+}
