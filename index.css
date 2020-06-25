@@ -32,7 +32,7 @@ a {
     text-align: end;
 }
 
-#here{
+.here{
     color: #FF5700;
 }
 /* styling letter */ 
@@ -44,7 +44,7 @@ a {
 }
 
 .i {
-    padding-bottom: 22px;
+    padding-bottom: 15.5px;
 }
 
 span{
@@ -54,11 +54,11 @@ span{
 
 .dot {
     color:#FF5700;
-    padding-bottom: 6px;
+    padding-bottom: 3px;
     
 }
 
-#main-title, #about-title{
+#main-title, #about-title, #footer-title{
     text-align: center;
     font-size: 3rem;
     color: snow;
@@ -66,6 +66,7 @@ span{
     margin: 0 0 1.8%;
     background-color: #311b92;
     box-shadow: 1px 1px 2px 1px #202020;
+    min-width: 100%;
     height: 15%;
     padding-top: 1.5%;
 }
@@ -77,6 +78,8 @@ span{
 .marketing{
     display: flex;
     justify-content: space-around;
+    min-width: 0;
+    max-width: 100%;
     align-items: center;
     padding: 4% 0
 }
@@ -121,6 +124,7 @@ span{
     font-size: .75rem;
     color: snow;
     background-color: 	#311b92	;
+    box-shadow: 2px 1px 1.5px #202020, -2px -2px 1.5px #202020 ;
 }
 
 hr{
@@ -175,7 +179,7 @@ hr{
 
 @keyframes blink-caret {
 from, to { border-color: transparent }
-50% { border-color: orange }
+50% { border-color: #FF570 }
 }
 
 .step.two h3{
@@ -210,11 +214,17 @@ from, to { border-color: transparent }
     align-items: center;
 
 }
+.presto {
+    font-style: italic;
+    color: linear-gradient(315deg, #756213 0%, #000000 74%);
+    ;
+}
 
-.description p{
+.description p, .description img{
     font-size: 1.2rem;
-    text-align: center;
-    padding-right: 6%
+    text-align: left;
+        width: 30%;
+    padding: 1.51515%
 }
 
 .description img{
@@ -224,7 +234,7 @@ from, to { border-color: transparent }
 /* About Team Page */
 
 #team-title {
-    font-size: 3rem;
+    font-size: 2.7  rem;
     margin: 0 12% 3%;
     text-align: end;
 }
@@ -276,8 +286,13 @@ footer{
     box-shadow: -1px -1px 2px 1px #202020;
 }
 
+
 /* Responsive Design */
+
+
 @media only screen and (max-width: 500px){
+
+    
     .works{
         flex-flow: column nowrap;
         min-height: 100%;
@@ -286,16 +301,95 @@ footer{
     }
     .step{
         min-width: 85%;
-        min-height: 270px;
-        margin-bottom: ;
+        min-height: 330px;
+        margin-bottom: 6%;
+
     }
 
-    
+    .step h3{
+        font-size: 3rem;
+    }
+
+    .step .example {
+        font-size: .75Crem;
+    }
+
+    .description{
+        display: flex;
+        flex-flow: column wrap;
+        margin: 28% 0 15%;
+        padding-top: ;
+        width: 100%;
+    }
+
+    .description .item-1, .description .item-2, .description .item-3{
+        width: 81%;
+        text-align: center;
+        font-size: .9rem;
+    }
+
+    #team{
+        max-height: 3000px;
+        min-height: 2100px;
+    }
+
     #team .member{
         max-width: 81%;
+        margin: 3.5% 0;
+        align-items: center
+
     }
 
-    #team-title{
-        margin bottom
+    #team h3{
+        font-size: 1.5rem;
+    
+    }
+
+    #team p{
+        font-size: .757575575rem;
+    }
+
+    #team img{
+        max-width: 45%;
+    }
+    #about-title, #footer-title, #team-title, #main-title{
+        padding-top:;
+        max-height: 15%;
+        font-size: 2.1rem;
+
+    }
+
+    .marketing {
+        max-width: 500px;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: space-around;
+    }
+
+    #marketing  #logo{
+        min-width: 330px;
+    }
+
+    .marketing #copy {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    #copy h2{
+        min-width: 250px;
+        font-size: 1.6565rem;
+    }
+
+    #copy h3{
+        margin: 6%;
+    }
+
+    #login-button{
+        min-width: 120px;
+    }
+
+    footer{
     }
 }
