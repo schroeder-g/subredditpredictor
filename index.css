@@ -6,9 +6,14 @@
     /* Border: 1px solid black; */
     }
 
+html{
+    min-width: 100%;
+}
+
 body{
     font-family: 'Asap', sans-serif;
-    font-size: 62.5% /* sets 1rem to 10 px */
+    font-size: 62.5%; /* sets 1rem to 10 px */
+    min-width: 100%;
 }
 
 nav{
@@ -65,7 +70,7 @@ span{
     /* font-family: 'Varela Round', sans-serif; */
     margin: 0 0 1.8%;
     background-color: #311b92;
-    box-shadow: 1px 1px 2px 1px #202020;
+    /* box-shadow: 1px 1px 2px 1px #202020; */
     min-width: 100%;
     height: 15%;
     padding-top: 1.5%;
@@ -73,6 +78,7 @@ span{
 
 #about-title{
     padding-top: .2%;
+    box-shadow: 1px 1px 2px 1px #202020;
 }
 /* For the Home page */
 .marketing{
@@ -96,12 +102,12 @@ span{
     flex-direction: column;
     align-items: center;
     width: 42%;
-    min-width: 550px;
     max-width: 100%;
 }
 
 #copy h2{
     display: flex;
+    flex-flow: row rap;
     align-items: center;
     text-align: center;
     font-size: 2.4rem
@@ -135,6 +141,7 @@ hr{
 .works{
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
     height: 60%;
     padding: 3% 6% 0;
 }
@@ -143,7 +150,7 @@ hr{
     display: flex;
     flex-direction: column;
     width: 30%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     /* border: 4px solid #336699; */
     box-shadow: 1.5px 1.5px 4px 1px #202020;
@@ -179,7 +186,7 @@ hr{
 
 @keyframes blink-caret {
 from, to { border-color: transparent }
-50% { border-color: #FF570 }
+50% { border-color: #FF5700 }
 }
 
 .step.two h3{
@@ -197,20 +204,22 @@ from, to { border-color: transparent }
 
 .step .construction{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     transform: rotate(-30deg);
 }
 
 .step .explainer{
     text-align: center;
-    height: 43.44px;
+    height: 25%;
     font-size: .9rem;
-    padding: 0 15% 3%;
+    padding: 0 12% 3%;
+    width: 100%
 }
 
 .description{
     display: flex;
     padding: 3% 6%;
+    justify-content: space-between;
     align-items: center;
 
 }
@@ -220,10 +229,11 @@ from, to { border-color: transparent }
     ;
 }
 
-.description p, .description img{
-    font-size: 1.2rem;
-    text-align: left;
-        width: 30%;
+.description .item-1, .description .item-2, .description .item-3 {
+    font-size: 1rem;
+    text-align: center;
+    width: 30%;
+    min-width: 30;
     padding: 1.51515%
 }
 
@@ -234,8 +244,8 @@ from, to { border-color: transparent }
 /* About Team Page */
 
 #team-title {
-    font-size: 2.7  rem;
-    margin: 0 12% 3%;
+    font-size: 2.4rem;
+    padding-right: 6%;
     text-align: end;
 }
 
@@ -292,17 +302,21 @@ footer{
 
 @media only screen and (max-width: 500px){
 
-    
+    a {
+        padding: 0 6%;
+    }
     .works{
         flex-flow: column nowrap;
-        min-height: 100%;
+        min-height: 1200px;
         align-items: center;
+        justify-content: space-around;
+        margin-top: 6%;
 
     }
     .step{
         min-width: 85%;
         min-height: 330px;
-        margin-bottom: 6%;
+        margin-bottom: 1.5%;
 
     }
 
@@ -311,14 +325,13 @@ footer{
     }
 
     .step .example {
-        font-size: .75Crem;
+        font-size: .72rem;
     }
 
     .description{
         display: flex;
         flex-flow: column wrap;
-        margin: 28% 0 15%;
-        padding-top: ;
+        margin: 6% 0 6%;
         width: 100%;
     }
 
@@ -355,7 +368,9 @@ footer{
     #about-title, #footer-title, #team-title, #main-title{
         padding-top:;
         max-height: 15%;
+        min-width: 100%;
         font-size: 2.1rem;
+        margin:
 
     }
 
@@ -368,8 +383,8 @@ footer{
         align-items: space-around;
     }
 
-    #marketing  #logo{
-        min-width: 330px;
+    .marketing  #logo{
+        min-width: 50px;
     }
 
     .marketing #copy {
@@ -390,6 +405,4 @@ footer{
         min-width: 120px;
     }
 
-    footer{
-    }
 }
